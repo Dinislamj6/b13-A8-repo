@@ -1,24 +1,25 @@
 import Image from "next/image";
+import { FaStar } from "react-icons/fa";
 
 const CourseCard = ({ topCourse }) => {
 
     return (
         <div>
-            <div className="card bg-base-100 w-96 shadow-sm">
+            <div className="card bg-base-100  h-full shadow-sm">
                 <figure>
-                   <Image src={topCourse.image} alt={topCourse.title} width={200} height={200}></Image>
+                    <Image className="w-full h-full object-cover" src={topCourse.image} alt={topCourse.title} width={200} height={200}></Image>
                 </figure>
-                <div className="card-body">
-                    <h2 className="card-title">
-                        Card Title
-                        <div className="badge badge-secondary">NEW</div>
+                <div className="card-body space-y-3">
+                    <h2 className="card-title font-bold text-lg flex justify-between items-center">
+                        {topCourse.title}
+                        <div className="badge badge-secondary"><FaStar className="text-yellow-400" /> {topCourse.rating}</div>
                     </h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
+                    <div className="flex justify-between items-center">
+                        <h2 className="font-semibold text-xl">Instructor : {topCourse.instructor}</h2>
+                        <button className="btn">Course Details</button>
                     </div>
                 </div>
+
             </div>
         </div>
     );

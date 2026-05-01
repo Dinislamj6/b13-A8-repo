@@ -10,7 +10,7 @@ const TopCourses = async() => {
         <div>
             <h2 className="text-2xl font-bold mt-5">Popular Courses 🔥</h2>
 
-            <div>
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
                 {
                     topCourses.map(topCourse => <CourseCard topCourse={topCourse} key={topCourse.id}></CourseCard>)
                 }
