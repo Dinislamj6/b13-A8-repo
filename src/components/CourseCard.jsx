@@ -5,7 +5,7 @@ const CourseCard = ({ topCourse }) => {
 
     return (
         <div>
-            <div className="card bg-base-100  h-full shadow-sm">
+            <div className="card bg-base-100  h-full  shadow-sm mt-5">
                 <figure>
                     <Image className="w-full h-full object-cover" src={topCourse.image} alt={topCourse.title} width={200} height={200}></Image>
                 </figure>
@@ -16,7 +16,7 @@ const CourseCard = ({ topCourse }) => {
                     </h2>
                     <div className="flex justify-between items-center">
                         <h2 className="font-semibold text-xl">Instructor : {topCourse.instructor}</h2>
-                        <button className="btn">Course Details</button>
+                        <button className="btn bg-purple-800 text-white rounded-md">Course Details</button>
                     </div>
                 </div>
 
