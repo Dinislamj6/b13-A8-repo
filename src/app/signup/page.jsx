@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
     const router = useRouter()
@@ -40,16 +41,16 @@ const SignUpPage = () => {
             image: photo,
         })
          if (error) {
-            alert("signUp unsuccsefull");
+            toast.error("signUp failed🚫please try again");
             return;
         }
         if(!error){
             router.push("/")
+           
         }
         if(data){
-            alert("singUp successful")
+            toast.success("singUp successful!🎉")
         }
-        console.log(fromData,"form");
 
     }
     return (

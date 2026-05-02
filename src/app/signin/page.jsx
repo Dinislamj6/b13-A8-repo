@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { FcGoogle } from 'react-icons/fc';
+import { toast } from 'react-toastify';
 
 const SignInPage = () => {
     const {register,watch ,handleSubmit,formState: { errors }} = useForm()
@@ -22,13 +23,13 @@ const SignInPage = () => {
           
             })
              if (error) {
-                alert("signIn Unsuccessful");
+                toast.error("Login failed❗try again!");
                 return;
             }
-            if(FormData){
-                alert("singIn successful")
+            if(data){
+               toast.success("Login successful!🎉")
             }
-            console.log(fromData,"form", error);
+           
     
         }
 
