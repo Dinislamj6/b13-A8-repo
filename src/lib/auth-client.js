@@ -1,6 +1,6 @@
 import { createAuthClient } from "better-auth/react"
 export const authClient = createAuthClient({
     /** The base URL of the server (optional if you're using the same domain) */
-    baseURL: "http://localhost:3000"  // final diploy are ata chaneg hobe
+    baseURL: process.env.BETTER_AUTH_URL  // final diploy are ata chaneg hobe
 })
 export const { signIn, signUp, useSession } = createAuthClient()
