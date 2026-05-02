@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 
 const CourseCard = ({ Course }) => {
@@ -16,7 +17,7 @@ const CourseCard = ({ Course }) => {
                     </h2>
                     <div className="flex justify-between items-center">
                         <h2 className="font-semibold text-xl">Instructor : {Course.instructor}</h2>
-                        <button className="btn bg-purple-800 text-white rounded-md">Course Details</button>
+                        <Link href={`/all-courses/${Course.id}`}><button className="btn bg-purple-800 text-white rounded-md">Course Details</button></Link>
                     </div>
                 </div>
 
