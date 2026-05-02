@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { FaChalkboardTeacher, FaCertificate, FaClock, FaHeadset, } from "react-icons/fa";
 
+
 const WhyChoice = () => {
     return (
         <section className="max-w-7xl mx-auto px-6 py-16">

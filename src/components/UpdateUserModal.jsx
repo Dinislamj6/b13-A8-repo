@@ -14,7 +14,6 @@ const UpdateUserModal = () => {
     }
     return (
         <div>
-            {/* Open the modal using document.getElementById('ID').showModal() method */}
             <button className="btn" onClick={() => document.getElementById('my_modal_5').showModal()}>Update Your Profile</button>
             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
