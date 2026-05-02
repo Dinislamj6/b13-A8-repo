@@ -3,6 +3,7 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { FcGoogle } from 'react-icons/fc';
 
 const SignInPage = () => {
     const {register,watch ,handleSubmit,formState: { errors }} = useForm()
@@ -17,7 +18,7 @@ const SignInPage = () => {
                 email: email, // required
                 password: password, // required
                 callbackURL: "/",
-                
+
           
             })
              if (error) {
@@ -29,6 +30,14 @@ const SignInPage = () => {
             }
             console.log(fromData,"form", error);
     
+        }
+
+        // google authentication 
+        const handelGoogleSignIn = async() => {
+            await authClient.signIn.social({
+                provider: "google"
+            })
+
         }
 
   
@@ -52,6 +61,8 @@ const SignInPage = () => {
 
                     <button className="btn w-full bg-slate-800 text-white">Login</button>
                 </form>
+                 <p className='text-center'>or</p>
+                 <button onClick={handelGoogleSignIn} className='btn bg-blue-500 text-white w-full'><FcGoogle /> Sign In With Google</button>
                 <p className='mt-4'>Don't have an account? <Link className='text-blue-500' href={"/signup"}>SignUp</Link></p>
             </div>
         </div>
