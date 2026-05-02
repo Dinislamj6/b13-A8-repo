@@ -31,7 +31,7 @@ const Navbar = () => {
                                 <NavLink href={"/"}>Home</NavLink>
                             </li>
                             <li>
-                                <NavLink href={"/courses"}>Courses</NavLink>
+                                <NavLink href={"/all-courses"}>Courses</NavLink>
                             </li>
                             <li>
                                 <NavLink href={"/profile"}>
@@ -40,7 +40,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                    <a className="text-purple-500 text-2xl font-bold">EduFlow</a>
+                    <a className="text-purple-500 text-2xl font-bold">SkillSphere</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-4">
@@ -62,8 +62,8 @@ const Navbar = () => {
                 <div className="navbar-end gap-2">
                     {!user &&
                         <div className="space-x-3">
-                            <Link href={"/signup"}>SignUp</Link>
-                            <Link href={"/signin"}>Sign in</Link>
+                              <Link href={"/signin"}>Login </Link>
+                            <Link href={"/signup"}>Register</Link>
                         </div>
                     }
                     {
