@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import LearningTop from "@/components/LearningTop";
 import Stats from "@/components/Stats";
 import TopCourses from "@/components/TopCourses";
 import WhyChoice from "@/components/WhyChoice";
@@ -12,6 +13,7 @@ export default function Home() {
         <TopCourses></TopCourses>
          <WhyChoice></WhyChoice>
          <Stats></Stats>
+         <LearningTop></LearningTop>
     </div>
   );
 }
