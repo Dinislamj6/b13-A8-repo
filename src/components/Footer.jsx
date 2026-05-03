@@ -90,8 +90,8 @@ const Footer = () => {
           </form>
         </motion.div>
       </div>
-      <div className="border-t border-gray-700 text-center py-4 text-sm">
-        © {new Date().getFullYear()} Your Website. All rights reserved.
+      <div className="border-t border-gray-700 text-center py-4 text-sm text-gray-400">
+        © {new Date().getFullYear()} Your Website. All rights reserved. | Made with ❤️ by Din Islam
       </div>
     </motion.footer>
   );
