@@ -1,5 +1,5 @@
 "use client";
-import { FaFacebook, FaGithub,FaLinkedin,FaTwitter,} from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaTwitter, } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -26,28 +26,36 @@ const Footer = () => {
           <h2 className="text-xl font-semibold text-white mb-4">
             Social Links
           </h2>
-
           <ul className="space-y-2">
-            {[
-              { icon: <FaFacebook />, name: "Facebook" },
-              { icon: <FaTwitter />, name: "Twitter" },
-              { icon: <FaLinkedin />, name: "LinkedIn" },
-              { icon: <FaGithub />, name: "GitHub" },
-            ].map((item) => (
-              <li key={item.name}>
-                <a
-                  href="#"
-                  className="flex items-center gap-2 transition duration-300 hover:text-white"
-                >
-                  {item.icon}
-                  {item.name}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a href="https://www.facebook.com/iftekher.din.islam.chowdhury" className="flex items-center gap-2 hover:text-white transition">
+                <FaFacebook />
+                Facebook
+              </a>
+            </li>
+
+            <li>
+              <a href="#" className="flex items-center gap-2 hover:text-white transition">
+                <FaTwitter />
+                Twitter
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/dinislamdev/" className="flex items-center gap-2 hover:text-white transition">
+                <FaLinkedin />
+                LinkedIn
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/Dinislamj6" className="flex items-center gap-2 hover:text-white transition">
+                <FaGithub />
+                GitHub
+              </a>
+            </li>
           </ul>
         </motion.div>
-
-        
         <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
           <h2 className="text-xl font-semibold text-white mb-4">Legal</h2>
           <ul className="space-y-2">
@@ -63,15 +71,11 @@ const Footer = () => {
             </li>
           </ul>
         </motion.div>
-
-
         <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
           <h2 className="text-xl font-semibold text-white mb-4">
             Subscribe
           </h2>
-
           <p className="mb-3">Get latest updates</p>
-
           <form className="flex">
             <input
               type="email"
@@ -80,15 +84,12 @@ const Footer = () => {
             />
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 px-4 py-2 rounded-r-md text-white hover:bg-blue-700 transition"
-            >
+              className="bg-blue-600 px-4 py-2 rounded-r-md text-white hover:bg-blue-700 transition">
               Join
             </motion.button>
           </form>
         </motion.div>
       </div>
-
-
       <div className="border-t border-gray-700 text-center py-4 text-sm">
         © {new Date().getFullYear()} Your Website. All rights reserved.
       </div>

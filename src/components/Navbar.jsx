@@ -62,8 +62,8 @@ const Navbar = () => {
                 <div className="navbar-end gap-2">
                     {!user &&
                         <div className="space-x-3">
-                              <Link href={"/signin"}>Login </Link>
-                            <Link href={"/signup"}>Register</Link>
+                              <Link href={"/signin"}><button className="btn rounded-lg">Login</button></Link>
+                            <Link href={"/signup"}><button className="btn rounded-xl bg-blue-600 text-white">Register</button></Link>
                         </div>
                     }
                     {

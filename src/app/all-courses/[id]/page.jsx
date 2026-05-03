@@ -50,6 +50,7 @@ const CourseDetailsPage = async ({ params }) => {
                     Enroll Now
                 </button>
             </div>
+            <CourseCurriculum courseId={id}></CourseCurriculum>
         </div>
     );
 };
