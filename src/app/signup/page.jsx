@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
@@ -51,15 +52,15 @@ const SignUpPage = () => {
         if(data){
             toast.success("singUp successful!🎉")
         }
+        
 
     }
     return (
         <div className='container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100'>
             <div className='p-4 rounded-xl bg-white my-5'>
-                <h2 className='font-bold text-3xl text-center mb-6'>SignUp your account</h2>
-
-
-                <form className='space-y-4' onSubmit={handleSubmit(handelSignUp)}>
+                 <h2 className='font-bold text-2xl text-blue-500 text-center'>Welcome</h2>
+                <h2 className='font-bold text-xl text-center mb-4'>Register your account</h2>
+                <form className='space-y-2' onSubmit={handleSubmit(handelSignUp)}>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Email</legend>
                         <input type="email" {...register("email", { required: "email field is required" })} className="input" placeholder="Type your email" />
@@ -84,6 +85,7 @@ const SignUpPage = () => {
 
                     <button className="btn w-full bg-slate-800 text-white">SignUp</button>
                 </form>
+                  <p className='mt-4'>Already have an account? <Link className='text-blue-500' href={"/signin"}>Login</Link></p>
             </div>
         </div>
     );

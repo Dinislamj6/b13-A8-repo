@@ -60,7 +60,7 @@ const NewReleases = () => {
                     {courses.map((course) => (
                         <div
                             key={course.id}
-                            className="border rounded-2xl shadow-md p-6 bg-white   transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:border-blue-500 cursor-pointer">
+                            className="rounded-2xl shadow-md p-6 bg-white   transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:border-blue-500 cursor-pointer">
                             <span className="text-xs px-3 py-1 rounded-full bg-purple-100 text-purple-600">
                                 {course.level}
                             </span>

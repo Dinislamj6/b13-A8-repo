@@ -8,7 +8,7 @@ const CourseDetailsPage = async ({ params }) => {
     const res = await fetch("https://b13-a8-repo.vercel.app/data.json")
     const courses = await res.json();
     const course = courses.find(c => c.id == id)
-    console.log(course, "if id");
+    
 
     return (
         <div className="max-w-4xl mx-auto px-6 py-10 min-h-screen">

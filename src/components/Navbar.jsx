@@ -11,7 +11,7 @@ const Navbar = () => {
     const user = userData?.data?.user
     console.log(user);
 
-    const handelLogOut = async() => {
+    const handelLogOut = async () => {
         await authClient.signOut();
 
     }
@@ -62,7 +62,7 @@ const Navbar = () => {
                 <div className="navbar-end gap-2">
                     {!user &&
                         <div className="space-x-3">
-                              <Link href={"/signin"}><button className="btn rounded-lg">Login</button></Link>
+                            <Link href={"/signin"}><button className="btn rounded-lg">Login</button></Link>
                             <Link href={"/signup"}><button className="btn rounded-xl bg-blue-600 text-white">Register</button></Link>
                         </div>
                     }
@@ -70,7 +70,9 @@ const Navbar = () => {
                         user && <div className="flex gap-2 items-center">
                             <div className="avatar">
                                 <div className="ring-primary ring-offset-base-100 w-8 rounded-full ring-2 ring-offset-2">
-                                    <Image referrerPolicy="no-referrer" width={10} height={10} alt="user" src={user?.image} />
+                                    {
+                                        user.image && <Image referrerPolicy="no-referrer" width={10} height={10} alt="user" src={user?.image} />
+                                    }
                                 </div>
                             </div>
                             <button onClick={handelLogOut} className="btn btn-sm btn-error rounded-full text-white">LogOut</button>

@@ -6,8 +6,6 @@ import Image from "next/image";
 const ProfilePage = () => {
     const userData = authClient.useSession();
     const user = userData?.data?.user;
-    console.log(user, "usss");
-    console.log(user);
     return (
         <div>
             <div className="card max-w-96 mx-auto bg-base-100 card-xl shadow-sm rounded-3xl mt-10">
