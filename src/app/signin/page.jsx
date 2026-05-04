@@ -7,7 +7,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
 
 const SignInPage = () => {
-    const { register, watch, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm()
     const handelSignUp = async (data) => {
         const { email, password, } = data;
         const { data: fromData, error } = await authClient.signIn.email({
@@ -24,8 +24,6 @@ const SignInPage = () => {
          if (data) {
             toast.success("Login successful!🎉")
         }
-
-
 
     }
 

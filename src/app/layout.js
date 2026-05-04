@@ -6,13 +6,9 @@ import Footer from "@/components/Footer";
 import { ToastContainer } from "react-toastify";
 import Navbar from "../components/Navbar";
 
-
-
-
 const OutfitFont = Outfit({
   subsets: ["latin"],
 });
-
 
 export const metadata = {
   title: "Online Learning Platform",

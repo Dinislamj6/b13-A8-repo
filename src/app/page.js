@@ -5,7 +5,7 @@ import Stats from "@/components/Stats";
 import TopCourses from "@/components/TopCourses";
 import TopInstructor from "@/components/TopInstructor";
 import WhyChoice from "@/components/WhyChoice";
-import WhyChooseUs from "@/components/WhyChoice";
+
 
 
 export default function Home() {

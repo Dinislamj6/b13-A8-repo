@@ -1,37 +1,16 @@
 "use client"
-// import { auth } from '@/lib/auth';
+
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
     const router = useRouter()
 
-    const { register, watch, handleSubmit, formState: { errors } } = useForm()
-    // const handelSignUp = async (formData) => {
-    //     const { email, name, password, photo } = formData;
-
-    //     const result = await authClient.signUp.email({
-    //         name,
-    //         email,
-    //         password,
-    //         photo,
-    //         // image: photo
-    //     });
-
-    //     const { data, error } = result;
-
-    //     if (error) {
-    //         console.log(error);
-    //         return;
-    //     }
-
-    //     console.log("User created:", data);
-    // };
+    const { register, handleSubmit, formState: { errors } } = useForm()
     const handelSignUp = async (data) => {
         const { email, name, password, photo } = data;
         console.log(name, password, email, photo);

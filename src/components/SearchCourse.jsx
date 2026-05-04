@@ -1,5 +1,4 @@
 
-
 const SearchCourse = ({setSearch}) => {
     return (
         <div>

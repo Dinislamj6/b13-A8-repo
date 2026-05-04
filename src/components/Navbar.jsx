@@ -3,17 +3,22 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import NavLink from "./Navlink";
-
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
     const { data } = authClient.useSession();
     const user = data?.user
     console.log(user);
+    
+    const router = useRouter();
 
     const handelLogOut = async () => {
         await authClient.signOut();
+        router.refresh()
+        router.push("/")
 
     }
+    
     const imageSrc =
         user?.image && user.image.startsWith("http")
             ? user.image
