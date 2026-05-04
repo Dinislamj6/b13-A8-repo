@@ -31,18 +31,7 @@ const SignUpPage = () => {
                 }
             }
         })
-        //  if (error) {
-
-        //     return;
-        // }
-        // if(!error){
-
-
-        // }
-        // if (data) {
-
-        // }
-
+    
 
     }
     return (

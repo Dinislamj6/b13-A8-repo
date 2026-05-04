@@ -9,7 +9,7 @@ export async function proxy(request) {
         headers: await headers ()
 
     })
-    console.log(session,"poxy");
+
 
     if(!session){
   return NextResponse.redirect(new URL('/signin', request.url))
@@ -22,5 +22,5 @@ export async function proxy(request) {
  
 export const config = {
   matcher: ['/profile', "/all-courses/:path"],
-  // matcher: ['/profile/:path', "/all-courses/:path"],
+
 }
