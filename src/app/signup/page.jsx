@@ -1,5 +1,6 @@
 "use client"
 
+// import { auth } from '@/lib/auth';
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -20,9 +21,10 @@ const SignUpPage = () => {
             password: password, // required
             image: photo,
             fetchOptions: {
-                onSuccess: () => {
+                onSuccess: async () => {
                     toast.success("singUp successful!🎉")
-                    router.push("/")
+                    router.push("/signin")
+                    await authClient.signOut()
                 },
                 onError: () => {
                     toast.error("signUp failed🚫please try again");
