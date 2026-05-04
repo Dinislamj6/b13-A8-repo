@@ -1,20 +1,24 @@
 "use client"
 import Link from "next/link";
-import NavLink from "./Navlink";
 import { authClient } from "@/lib/auth-client";
-import { use } from "react";
 import Image from "next/image";
+import NavLink from "./Navlink";
 
 
 const Navbar = () => {
-    const userData = authClient.useSession();
-    const user = userData?.data?.user
+    const { data } = authClient.useSession();
+    const user = data?.user
     console.log(user);
 
     const handelLogOut = async () => {
         await authClient.signOut();
 
     }
+    const imageSrc =
+        user?.image && user.image.startsWith("http")
+            ? user.image
+            : "https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg";
+
 
     return (
         <div className=" bg-base-100 shadow-sm">
@@ -71,7 +75,12 @@ const Navbar = () => {
                             <div className="avatar">
                                 <div className="ring-primary ring-offset-base-100 w-8 rounded-full ring-2 ring-offset-2">
                                     {
-                                        user.image && <Image referrerPolicy="no-referrer" width={10} height={10} alt="user" src={user?.image} />
+                                        user.image && <Image referrerPolicy="no-referrer"
+                                            width={10}
+                                            height={10}
+                                            alt="user"
+                                            src={imageSrc}
+                                        />
                                     }
                                 </div>
                             </div>

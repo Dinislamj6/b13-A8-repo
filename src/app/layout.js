@@ -2,9 +2,12 @@ import dns from "node:dns";
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ToastContainer } from "react-toastify";
+import Navbar from "../components/Navbar";
+
+
+
 
 const OutfitFont = Outfit({
   subsets: ["latin"],
@@ -24,9 +27,9 @@ export default function RootLayout({ children }) {
       className={`${OutfitFont.className} h-full antialiased`}
     >
       <body>
-        <Navbar></Navbar>
+        <Navbar/>
         <main className="max-w-7xl mx-auto">{children}</main>
-        <Footer></Footer>
+        <Footer/>
         <ToastContainer
           position="top-center"
           autoClose={5000}

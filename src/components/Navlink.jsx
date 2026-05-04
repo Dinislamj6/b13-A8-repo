@@ -7,7 +7,7 @@ const NavLink = ({ href, className, children }) => {
   const pathname = usePathname();
   console.log(pathname, "pathname");
 
-  const isActive = href === pathname;
+  const isActive = href == pathname;
 
   return (
     <Link
